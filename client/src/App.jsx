@@ -1,7 +1,7 @@
 const App = () => {
 	return (
 		<>
-			<div>
+			<div className='app'>
 				<p>Admin Dashboard Tempalte</p>
 			</div>
 		</>

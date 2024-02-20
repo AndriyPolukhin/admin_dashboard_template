@@ -1,6 +1,6 @@
 import express from 'express'
 import bodyParser from 'body-parser'
-import mongoose from 'mongoose'
+
 import cors from 'cors'
 import dotenv from 'dotenv'
 import helmet from 'helmet'
@@ -9,6 +9,8 @@ import clientRoutes from './routes/client.js'
 import generalRoutes from './routes/general.js'
 import managementRoutes from './routes/management.js'
 import salesRoutes from './routes/sales.js'
+
+import connectDB from './db/connect.js'
 
 /** CONFIGURATION  */
 dotenv.config()
@@ -28,3 +30,8 @@ app.use('/management', managementRoutes)
 app.use('/sales', salesRoutes)
 
 /** MONGOOSE SETUP */
+const PORT = process.env.PORT || 5001
+await connectDB()
+
+/** SERVER RUNING  */
+app.listen(PORT, () => console.log(`Server port: ${PORT || 5001}`))

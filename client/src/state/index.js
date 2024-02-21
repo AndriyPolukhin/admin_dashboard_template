@@ -9,11 +9,11 @@ export const globalState = createSlice({
 	initialState,
 	reducers: {
 		setMode: (state) => {
-			state.mode = state.mode === 'dark' ? 'dark' : 'light'
+			state.mode = state.mode === 'light' ? 'dark' : 'light'
 		},
 	},
 })
 
-export const { setMode } = globalSlice.actions
+export const { setMode } = globalState.actions
 
-export default globalSlice.reducer
+export default globalState.reducer

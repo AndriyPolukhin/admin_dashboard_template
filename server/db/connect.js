@@ -2,6 +2,13 @@ import dotenv from 'dotenv'
 dotenv.config()
 import mongoose from 'mongoose'
 
+/** Data Imports */
+
+/** Data Inserted:
+import User from '../models/User.js'
+import { dataUser } from '../data/index.js'
+*/
+
 const connectDB = async () => {
 	try {
 		const clientOptions = {
@@ -15,7 +22,8 @@ const connectDB = async () => {
 		)
 		/** Add data one time only or as needed */
 		// await mongoose.connection.db.dropDatabase()
-		// await MODEL.insertMany(kpis)
+		// await MODEL.insertMany(mockData)
+		// await User.insertMany(dataUser)
 	} catch (error) {
 		console.log(`Error: ${error.message}`)
 		process.exit(1)

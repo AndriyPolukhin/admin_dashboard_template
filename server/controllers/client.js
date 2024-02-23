@@ -6,9 +6,10 @@ export const getProducts = async (req, res) => {
 		const products = await Product.find()
 		const productsWithStats = await Promise.all(
 			products.map(async (product) => {
-				const stat = await ProductStat.find({
+				let stat = await ProductStat.find({
 					productId: product._id,
 				})
+				stat = stat[0]
 				return {
 					...product._doc,
 					stat,

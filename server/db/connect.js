@@ -7,6 +7,9 @@ import mongoose from 'mongoose'
 /** Data Inserted:
 import User from '../models/User.js'
 import { dataUser } from '../data/index.js'
+import Product from '../models/Product.js'
+import ProductStat from '../models/ProductStat.js'
+import { dataProduct, dataProductStat } from '../data/index.js'
 */
 
 const connectDB = async () => {
@@ -24,6 +27,8 @@ const connectDB = async () => {
 		// await mongoose.connection.db.dropDatabase()
 		// await MODEL.insertMany(mockData)
 		// await User.insertMany(dataUser)
+		// await Product.insertMany(dataProduct)
+		// await ProductStat.insertMany(dataProductStat)
 	} catch (error) {
 		console.log(`Error: ${error.message}`)
 		process.exit(1)

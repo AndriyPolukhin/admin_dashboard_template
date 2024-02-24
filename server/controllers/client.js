@@ -59,9 +59,11 @@ export const getTransactions = async (req, res) => {
 			.skip(page * pageSize)
 			.limit(pageSize)
 
-		const total = await Transaction.countDocuments({
-			name: { $regex: search, $options: 'i' },
-		})
+		const total = search
+			? await Transaction.countDocuments({
+					name: { $regex: search, $options: 'i' },
+			  })
+			: await Transaction.countDocuments()
 
 		res.status(200).json({
 			transactions,

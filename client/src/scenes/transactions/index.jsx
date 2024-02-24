@@ -23,8 +23,6 @@ const Transactions = () => {
 		search,
 	})
 
-	console.log(data)
-
 	const columns = [
 		{ field: '_id', headerName: 'ID', flex: 1 },
 		{ field: 'userId', headerName: 'User ID', flex: 1 },

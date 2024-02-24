@@ -6,26 +6,6 @@ const Customers = () => {
 	const theme = useTheme()
 	const { data, isLoading } = useGetCustomersQuery()
 
-	if (!isLoading) {
-		console.log(data)
-	}
-
-	/**
-     _id: '63701cc1f03239c72c000180',
-      name: 'Marilyn',
-      email: 'mdonlon1@hostgator.com',
-      city: 'Zhanghekou',
-      state: null,
-      country: 'CN',
-      occupation: 'Food Chemist',
-      phoneNumber: '9981906117',
-      transactions: [
-        '63701d74f03239b7f7000027', '63701d74f03239db69000153', '63701d74f03239569400002d',
-        '63701d74f032394c4900014b'
-      ],
-      role: 'user',
-     */
-
 	const columns = [
 		{
 			field: '_id',

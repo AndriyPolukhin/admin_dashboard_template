@@ -21,7 +21,7 @@ const OverallStatSchema = new mongoose.Schema(
 			},
 		],
 		salesByCategory: {
-			types: Map,
+			type: Map,
 			of: Number,
 		},
 	},

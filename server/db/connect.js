@@ -14,7 +14,7 @@ import mongoose from 'mongoose'
 	import { dataTransaction } from '../data/index.js'
 	import OverallStat from '../models/OverallStat.js'
 	import { dataOverallStat } from '../data/index.js'
-*/
+	*/
 const connectDB = async () => {
 	try {
 		const clientOptions = {
@@ -34,7 +34,7 @@ const connectDB = async () => {
 			await ProductStat.insertMany(dataProductStat)
 			await Transaction.insertMany(dataTransaction)
 			await OverallStat.insertMany(dataOverallStat)
-		*/
+			*/
 	} catch (error) {
 		console.log(`Error: ${error.message}`)
 		process.exit(1)

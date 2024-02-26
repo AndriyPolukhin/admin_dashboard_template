@@ -14,6 +14,8 @@ import mongoose from 'mongoose'
 	import { dataTransaction } from '../data/index.js'
 	import OverallStat from '../models/OverallStat.js'
 	import { dataOverallStat } from '../data/index.js'
+	import AffiliateStat from '../models/AffiliateStat.js'
+	import { dataAffiliateStat } from '../data/index.js'
 	*/
 const connectDB = async () => {
 	try {
@@ -34,6 +36,7 @@ const connectDB = async () => {
 			await ProductStat.insertMany(dataProductStat)
 			await Transaction.insertMany(dataTransaction)
 			await OverallStat.insertMany(dataOverallStat)
+			await AffiliateStat.insertMany(dataAffiliateStat)
 			*/
 	} catch (error) {
 		console.log(`Error: ${error.message}`)
